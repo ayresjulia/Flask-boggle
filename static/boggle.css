@@ -1,0 +1,91 @@
+body {
+	background: url('https://images.unsplash.com/photo-1525034687081-c702010cb70d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+	font-family: 'Yusei Magic', sans-serif;
+	text-align: center;
+	color: white;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.table {
+	margin-right: 40px;
+}
+
+.board {
+	background-color: rgb(58, 32, 21);
+	border-radius: 10px;
+	width: auto;
+	height: auto;
+	font-size: 25px;
+	text-align: center;
+	padding: 10px;
+	color: rgb(241, 122, 142);
+}
+
+td {
+	border: 1px solid grey;
+	border-radius: 10px;
+	background-color: white;
+	width: 50px;
+	height: 50px;
+}
+
+h1 {
+	font-size: 40px;
+	margin-bottom: 0px;
+}
+
+.scores {
+	font-size: 20px;
+	text-align: center;
+}
+
+button,
+input {
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	font-family: 'Yusei Magic', sans-serif;
+}
+
+button {
+	background-color: rgba(241, 122, 142, 0.5);
+	color: black;
+}
+
+button:hover {
+	background-color: rgba(204, 75, 97, 1);
+	color: white;
+}
+
+input {
+	color: rgb(241, 122, 142);
+}
+
+ol {
+	list-style-type: upper-roman;
+	text-align: left;
+}
+
+.msg {
+	padding: 10px;
+	border-radius: 10px;
+}
+.msg.error {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+.msg.success {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+
+@media screen and (max-width: 560px) {
+	.container {
+		flex-direction: column;
+	}
+}

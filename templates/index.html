@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Boggle</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/static/boggle.css" />
+	</head>
+	<body>
+		<h1>This is Boggle!</h1>
+		<p><em>try to find as many words as possible</em></p>
+		<section id="boggle">
+			<div class="container">
+				<div class="table">
+					<table class="board">
+						<tbody>
+							{% for row in board %}
+							<tr>
+								{% for cell in row %}
+								<td>{{ cell }}</td>
+								{% endfor %}
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<div class="scores">
+					<p>
+						High Score:
+						<b>{{ highscore }}</b>
+						in {{ nplays }} plays
+					</p>
+
+					<p>
+						Score: <b class="score">0</b> Seconds Left:
+						<b class="timer"></b>
+					</p>
+
+					<form method="POST" class="add-word">
+						<input type="text" name="word" class="word" />
+						<button type="submit">Submit</button>
+					</form>
+
+					<p class="msg">
+						<!-- our JS will put messages here dynamically -->
+					</p>
+
+					<ol class="words">
+						<!-- our JS will add words here as they score -->
+					</ol>
+				</div>
+			</div>
+		</section>
+
+		<script src="http://unpkg.com/jquery"></script>
+		<script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+		<script src="/static/boggle.js"></script>
+	</body>
+</html>
